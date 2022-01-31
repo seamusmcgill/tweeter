@@ -1,0 +1,17 @@
+header {
+  background-image: url("../images/asfalt-dark.png");
+  background-color: #D48E3F;
+  color: white;
+  position: relative;
+  top: 45px;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header span {
+  font-weight: normal;
+}
