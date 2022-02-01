@@ -1,0 +1,38 @@
+.new-tweet {
+  padding: 1em;
+}
+
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-tweet label {
+  padding-bottom: 0.5em;
+}
+
+.new-tweet textarea {
+  border-width: 0 0 5px 0;
+  resize: none;
+  height: 2em;
+  background-color: #f4f1ec;
+  color: #000000;
+}
+
+.new-tweet textarea:focus {
+  outline: none;
+}
+
+.new-tweet div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+  font-family: "Bungee", cursive;
+}
+
+.new-tweet button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 8px;
+  border: 0;
+}
