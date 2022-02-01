@@ -4,7 +4,8 @@
 
 .new-tweet form {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .new-tweet label {
@@ -13,10 +14,12 @@
 
 .new-tweet textarea {
   border-width: 0 0 5px 0;
+  width: 100%;
   resize: none;
   height: 2em;
   background-color: #f4f1ec;
   color: #000000;
+  overflow: auto;
 }
 
 .new-tweet textarea:focus {
@@ -35,4 +38,11 @@
   color: #FFFFFF;
   padding: 8px;
   border: 0;
+  
+}
+
+.new-tweet button, .new-tweet output {
+  font-family: "Bungee", cursive;
+  margin-top: 0.5em;
+}
 }
