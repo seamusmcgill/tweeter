@@ -27,7 +27,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  h1, h2, p {
-   margin: 0 auto 0 auto;
+   margin: 0 0;
  }
 
  .container {
