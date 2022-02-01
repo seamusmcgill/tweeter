@@ -1,19 +1,22 @@
 .new-tweet {
-  padding: 1em;
+  margin-bottom: 1em;
 }
 
 .new-tweet form {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .new-tweet label {
   padding-bottom: 0.5em;
+  font-weight: 600;
 }
 
 .new-tweet textarea {
-  border-width: 0 0 5px 0;
+  border-width: 0 0 4px 0;
+  border-color: #545149;
   width: 100%;
   resize: none;
   height: 2em;
@@ -24,13 +27,6 @@
 
 .new-tweet textarea:focus {
   outline: none;
-}
-
-.new-tweet div {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1em;
-  font-family: "Bungee", cursive;
 }
 
 .new-tweet button {
