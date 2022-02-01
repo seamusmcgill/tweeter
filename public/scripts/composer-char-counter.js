@@ -1,10 +1,9 @@
 $(document).ready(function() {
   // --- our code goes here ---
-  console.log("Document ready son!");
 
   $("#tweet-text").on("input", function() {
 
-    // Set the initital characters to 140 and dynamically update the HTML counter
+    // Set the initial characters to 140 and dynamically update the HTML counter
     let characters = 140 - $(this).val().length;
 
     $(this).siblings("output").html(characters);
