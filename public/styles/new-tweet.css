@@ -34,7 +34,7 @@
   color: #FFFFFF;
   padding: 8px;
   border: 0;
-  
+  cursor: pointer;
 }
 
 .new-tweet button, .new-tweet output {
