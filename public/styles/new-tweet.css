@@ -45,4 +45,7 @@
   font-family: "Bungee", cursive;
   margin-top: 0.5em;
 }
+
+.over-limit {
+  color: red;
 }
