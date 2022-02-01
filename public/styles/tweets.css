@@ -1,0 +1,51 @@
+article.tweet {
+  width: 100%;
+  padding: 1em;
+  border: 4px solid #545149;
+  margin: 1em 0;
+}
+
+article.tweet:hover {
+  box-shadow: 8px 8px rgba(64, 86, 161, 0.5);
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+article.tweet header div {
+  display: flex;
+  align-items: center;
+}
+
+article.tweet header div > * {
+  padding: 0 0.25em;
+}
+
+article.tweet header > p {
+  color: #D3D3D3;
+}
+
+article.tweet hr {
+  border-top: 4px solid #545149;
+  margin-top: 1.5em;
+}
+
+article.tweet footer {
+  display:flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+article.tweet footer div {
+  color: #4056A1;
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweet footer div i:hover {
+  color: #DAA520;
+}
