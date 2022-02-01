@@ -1,27 +1,27 @@
-nav {
-  height: 80px;
-  width: 100vw;
+nav.navbar-top {
+  height: 120px;
+  width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5em 0 1.5em;
-  position: absolute;
-  z-index: 9;
+  position: fixed;
+  z-index: 100;
 }
 
-nav span {
+nav.navbar-top span.navbar-top-logo {
   font-family: 'Bungee', cursive;
 }
 
-.right-nav {
+nav.navbar-top div.navbar-top-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.right-nav i {
+nav.navbar-top div.navbar-top-nav i {
   color: red;
 }
