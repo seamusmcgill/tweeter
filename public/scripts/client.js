@@ -7,6 +7,9 @@
 
 $(document).ready(function() {
 
+  // Hide the tweet error message on load
+  $("div.tweet-error").hide();
+
   // Escape function to protect against XSS
   const escape = function(str) {
     let div = document.createElement("div");
@@ -55,12 +58,23 @@ $(document).ready(function() {
     // Check whether a valid tweet was submitted before submitting
     let $tweetInput = $("#tweet-text").val();
 
+    // Hide any tweet error messaging / visuals before submission
+    $(".new-tweet textarea").removeClass("tweet-error");
+    $("div.tweet-error").hide();
+
     if (!$tweetInput) {
-      alert("Uh oh. You have to type something to send a tweet!");
+      // Fill in the correct error messaging and show the errors
+      $("div.tweet-error > p").html("Uh oh. You have to type something to send a tweet!");
+      $("div.tweet-error").slideDown(200);
+      $(".new-tweet textarea").addClass("tweet-error");
+      
       return;
     }
     if ($tweetInput.length > 140) {
-      alert("Oops. Your tweet is over the character limit.");
+      // Fill in the correct error messaging and show the errors
+      $("div.tweet-error > p").html("Oops. Your tweet is over the character limit.");
+      $(".new-tweet textarea").addClass("tweet-error");
+      $("div.tweet-error").slideDown(200);
       return;
     }
 
