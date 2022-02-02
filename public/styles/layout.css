@@ -10,9 +10,18 @@ html {
   box-sizing: inherit;
 }
 
+ /* COLOUR PALETTE
+ 
+ #545149 - darkish gray (used for text and borders)
+ #f4f1ec - eggshell/beige (for backgrounds)
+ #4056A1 - medium blue (for nav/buttons/hover)
+ 
+ */
+
 /*
  * Global layout stuff
  */
+
 
 body {
   color: #545149;
@@ -26,14 +35,15 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ /* Remove default browser margins on text */
  h1, h2, p {
    margin: 0 0;
  }
 
+ /* Styling for main container */
  .container {
   width: 90%;
-  position: relative;
-  top: 45px;
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
  }
