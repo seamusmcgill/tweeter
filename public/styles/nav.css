@@ -24,4 +24,18 @@ nav.navbar-top div.navbar-top-nav {
 
 nav.navbar-top div.navbar-top-nav i {
   color: red;
+  cursor: pointer;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(0.33em); }
+  100% { transform: translateY(0); }
 }
