@@ -43,5 +43,13 @@ $(document).ready(function() {
     $.post("/tweets", $formData);
   });
 
+  // Looad tweets from /tweets and pass them to the renderTweets function
+  const loadTweets = function() {
+    $.getJSON("/tweets", function(data) {
+      renderTweets(data);
+    });
+  };
+
+  loadTweets();
 });
 
