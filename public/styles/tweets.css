@@ -4,6 +4,7 @@ article.tweet {
   padding: 1em;
   border: 4px solid #545149;
   margin: 1em 0;
+  transition: 0.25s;
 }
 
 article.tweet:hover {
@@ -51,7 +52,7 @@ article.tweet footer {
 
 article.tweet footer div {
   color: #4056A1;
-  width: 10%;
+  width: 75px;
   display: flex;
   justify-content: space-between;
 }
