@@ -8,6 +8,7 @@
 $(document).ready(function() {
 
   // Hide the tweet error message on load
+  $(".new-tweet").toggle();
   $("div.tweet-error").hide();
 
   // Escape function to protect against XSS
@@ -50,6 +51,12 @@ $(document).ready(function() {
       $(".tweets-container").append($tweet);
     }
   };
+
+  $(".navbar-top-nav > i").on("click", function() {
+    $(".new-tweet").slideToggle(400, function() {
+      $(".new-tweet textarea").focus();
+    });
+  });
 
   // Listen for the submission of a new tweet and serialize the data
   $(".new-tweet > form").submit(function(event) {
@@ -97,7 +104,7 @@ $(document).ready(function() {
     $("#tweet-text").val("");
   });
 
-  // Looad tweets from /tweets and pass them to the renderTweets function
+  // Load tweets from /tweets and pass them to the renderTweets function
   const loadTweets = function() {
     $.getJSON("/tweets", function(data) {
       renderTweets(data);
