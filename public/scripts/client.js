@@ -4,6 +4,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(function() {
   
   // Create the HTML element for a tweet
@@ -48,7 +49,7 @@ $(document).ready(function() {
     let $tweetInput = $("#tweet-text").val();
 
     if (!$tweetInput) {
-      alert("Uh oh. You have to type something tos end a tweet!");
+      alert("Uh oh. You have to type something to send a tweet!");
       return;
     }
     if ($tweetInput.length > 140) {
@@ -58,8 +59,21 @@ $(document).ready(function() {
 
     let $formData = $(this).serialize();
 
-    // Send post request to /tweets with the data
-    $.post("/tweets", $formData);
+    // Send post request to tweets with the form content
+    $.post("/tweets", $formData)
+      // Get the submitted tweet from /tweets once post request is successful
+      .then(function() {
+        $.getJSON("/tweets")
+          .then(function(data) {
+            let $newTweetObject = data[data.length - 1];
+            // Create a new tweet element and prepend it to the tweet container
+            let $newTweet = createTweetElement($newTweetObject);
+            $(".tweets-container").prepend($newTweet);
+          });
+      });
+     
+    // Clear form of content
+    $("#tweet-text").val("");
   });
 
   // Looad tweets from /tweets and pass them to the renderTweets function
