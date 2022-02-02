@@ -29,5 +29,12 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // Render all the tweets in the data
+  const renderTweets = function(tweets) {
+    for (const tweet of tweets) {
+      let $tweet = createTweetElement(tweet);
+      $(".tweets-container").append($tweet);
+    }
+  };
 });
 
