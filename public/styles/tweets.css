@@ -1,3 +1,4 @@
+/* Styling for tweet container */
 article.tweet {
   width: 100%;
   padding: 1em;
@@ -9,6 +10,7 @@ article.tweet:hover {
   box-shadow: 8px 8px rgba(64, 86, 161, 0.5);
 }
 
+/* Styling for tweet header - avatar, username, and user handle */
 article.tweet header {
   display: flex;
   justify-content: space-between;
@@ -40,6 +42,7 @@ article.tweet hr {
   margin-top: 1.5em;
 }
 
+/* Styling for tweet footer - time posted and flag/retweet/like buttons */
 article.tweet footer {
   display:flex;
   justify-content: space-between;
@@ -54,5 +57,6 @@ article.tweet footer div {
 }
 
 article.tweet footer div i:hover {
-  color: #DAA520;
+  color: #D48E3F;
+  cursor: pointer;
 }
