@@ -1,9 +1,12 @@
+/* eslint-disable no-undef */
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
+  
+  // Create the HTML element for a tweet
   const createTweetElement = function(tweet) {
     const $tweet = $(`
     <article class="tweet">
@@ -36,6 +39,8 @@ $(document).ready(function() {
       $(".tweets-container").append($tweet);
     }
   };
+
+  // Listen for the submission of a new tweet and serialize the data
   $(".new-tweet > form").submit(function(event) {
     event.preventDefault();
     
@@ -52,7 +57,8 @@ $(document).ready(function() {
     }
 
     let $formData = $(this).serialize();
-    
+
+    // Send post request to /tweets with the data
     $.post("/tweets", $formData);
   });
 
