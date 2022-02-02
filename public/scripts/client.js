@@ -36,5 +36,12 @@ $(document).ready(function() {
       $(".tweets-container").append($tweet);
     }
   };
+  $(".new-tweet > form").submit(function(event) {
+    event.preventDefault();
+    let $formData = $(this).serialize();
+    
+    $.post("/tweets", $formData);
+  });
+
 });
 
