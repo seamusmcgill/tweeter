@@ -12,6 +12,7 @@ article.tweet:hover {
 article.tweet header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 2em;
 }
 
@@ -24,8 +25,14 @@ article.tweet header div > * {
   padding: 0 0.25em;
 }
 
+article.tweet header div > img {
+  height: 50px;
+  width: 62px;
+}
+
 article.tweet header > p {
   color: #D3D3D3;
+  font-weight: 600;
 }
 
 article.tweet hr {
