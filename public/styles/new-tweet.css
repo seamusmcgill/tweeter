@@ -1,7 +1,9 @@
+/* Styling for container */
 .new-tweet {
   margin-bottom: 1em;
 }
 
+/* Styling for form */
 .new-tweet form {
   display: flex;
   flex-flow: row wrap;
@@ -14,6 +16,7 @@
   font-weight: 600;
 }
 
+/* Styling for text entry area */
 .new-tweet textarea {
   border-width: 0 0 4px 0;
   border-color: #545149;
@@ -29,6 +32,7 @@
   outline: none;
 }
 
+/* Styling for new tweet button */
 .new-tweet button {
   background-color: #4056A1;
   color: #FFFFFF;
@@ -42,6 +46,7 @@
   margin-top: 0.5em;
 }
 
+/* For when counter is over the 140 character limit */
 .over-limit {
   color: red;
 }
