@@ -38,6 +38,19 @@ $(document).ready(function() {
   };
   $(".new-tweet > form").submit(function(event) {
     event.preventDefault();
+    
+    // Check whether a valid tweet was submitted before submitting
+    let $tweetInput = $("#tweet-text").val();
+
+    if (!$tweetInput) {
+      alert("Uh oh. You have to type something tos end a tweet!");
+      return;
+    }
+    if ($tweetInput.length > 140) {
+      alert("Oops. Your tweet is over the character limit.");
+      return;
+    }
+
     let $formData = $(this).serialize();
     
     $.post("/tweets", $formData);
