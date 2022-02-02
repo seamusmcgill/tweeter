@@ -52,6 +52,14 @@ $(document).ready(function() {
     }
   };
 
+  // Function to show error messaging on tweet error
+  const sendTweetError = function(message) {
+    $("div.tweet-error > p").html(message);
+    $("div.tweet-error").slideDown(200);
+    $(".new-tweet textarea").addClass("tweet-error");
+  };
+
+  // Toggle the compose new tweet area when the nav icon is clicked
   $(".navbar-top-nav > i").on("click", function() {
     $(".new-tweet").slideToggle(400, function() {
       $(".new-tweet textarea").focus();
@@ -71,17 +79,12 @@ $(document).ready(function() {
 
     if (!$tweetInput) {
       // Fill in the correct error messaging and show the errors
-      $("div.tweet-error > p").html("Uh oh. You have to type something to send a tweet!");
-      $("div.tweet-error").slideDown(200);
-      $(".new-tweet textarea").addClass("tweet-error");
-      
+      sendTweetError("Uh oh. You have to type something to send a tweet!");
       return;
     }
     if ($tweetInput.length > 140) {
       // Fill in the correct error messaging and show the errors
-      $("div.tweet-error > p").html("Oops. Your tweet is over the character limit.");
-      $(".new-tweet textarea").addClass("tweet-error");
-      $("div.tweet-error").slideDown(200);
+      sendTweetError("Oops. Your tweet is over the character limit.");
       return;
     }
 
@@ -100,8 +103,9 @@ $(document).ready(function() {
           });
       });
      
-    // Clear form of content
-    $("#tweet-text").val("");
+    // Clear form of content and reset character counter
+    $(this).children("textarea").val("");
+    $(this).children("output").html("140");
   });
 
   // Load tweets from /tweets and pass them to the renderTweets function
