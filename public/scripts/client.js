@@ -6,8 +6,15 @@
  */
 
 $(document).ready(function() {
+
+  // Escape function to protect against XSS
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   
-  // Create the HTML element for a tweet
+  // Create the HTML element for a tweet - using escape function on text from user
   const createTweetElement = function(tweet) {
     const $tweet = $(`
     <article class="tweet">
@@ -18,7 +25,7 @@ $(document).ready(function() {
         </div>
         <p>${tweet["user"].handle}</p>
       </header>
-      <p>${tweet["content"].text}</p>
+      <p>${escape(tweet["content"].text)}</p>
       <hr>
       <footer>
         <p>${timeago.format(tweet["created_at"])}</p>
