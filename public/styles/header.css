@@ -2,7 +2,7 @@ header.main-header {
   background-image: url("../images/asfalt-dark.png");
   background-color: #D48E3F;
   color: white;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,4 +14,14 @@ header.main-header {
 /* Styling for logged-in username */
 header.main-header span {
   font-weight: normal;
+}
+
+/* Desktop styling */
+@media only screen and (min-width: 1024px) {
+  header.main-header {
+    position: sticky;
+    padding: 1em;
+    margin: 8em 5% 0 5%;
+    width: 30%;
+  }
 }
