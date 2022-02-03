@@ -5,10 +5,8 @@ header.main-header {
   background-color: $accent-colour;
   color: #ffffff;
   width: 100vw;
-  display: flex;
+  @include vertical-center;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding-top: 120px;
   padding-bottom: 1em;
 

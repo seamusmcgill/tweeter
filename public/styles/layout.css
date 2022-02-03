@@ -55,8 +55,8 @@ main.container div.toggle-button {
   background-color: #ff0000;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 main.container > div.toggle-button > i {

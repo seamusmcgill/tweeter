@@ -4,3 +4,9 @@ $brand-colour: #4056A1;
 $accent-colour: #D48E3F;
 $main-font: 'Source Sans Pro', sans-serif;
 $logo-font: "Bungee", cursive;
+
+@mixin vertical-center {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
