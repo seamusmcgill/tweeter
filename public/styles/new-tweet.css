@@ -17,9 +17,9 @@
   /* Styling for text entry area */
   border-width: 0 0 4px 0;
   border-color: #545149;
+  height: 2em;
   width: 100%;
   resize: none;
-  height: 2em;
   background-color: #f4f1ec;
   color: #000000;
   overflow: auto;
