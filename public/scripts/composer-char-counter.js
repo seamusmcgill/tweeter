@@ -30,4 +30,14 @@ $(document).ready(function() {
       $(".container > div.toggle-button").fadeOut(200);
     }
   });
+
+  // Scroll up and slide down the new-tweet div on toggle button click
+  $("main.container > div.toggle-button").on("click", function() {
+    $(".new-tweet").slideDown(function() {
+      $("html, body").animate({scrollTop: 0 }, "slow", function() {
+        $(".new-tweet textarea").focus();
+      });
+    });
+  });
+
 });
