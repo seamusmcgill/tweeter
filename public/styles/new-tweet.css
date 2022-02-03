@@ -17,12 +17,14 @@
   /* Styling for text entry area */
   border-width: 0 0 4px 0;
   border-color: #545149;
+  padding-bottom: 0.5em;
   height: 2em;
+  line-height: 1.5em;
   width: 100%;
   resize: none;
   background-color: #f4f1ec;
   color: #000000;
-  overflow: auto;
+  overflow: hidden;
 }
 .new-tweet textarea:focus {
   outline: none;

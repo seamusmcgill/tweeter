@@ -21,12 +21,14 @@
     /* Styling for text entry area */
     border-width: 0 0 4px 0;
     border-color: $font-colour;
+    padding-bottom: 0.5em;
     height: 2em;
+    line-height: 1.5em;
     width: 100%;
     resize: none;
     background-color: $background-colour;
     color: #000000;
-    overflow: auto;
+    overflow: hidden;
   }
   
   textarea:focus {
