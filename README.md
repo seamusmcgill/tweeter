@@ -2,17 +2,26 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Tweets are rendered on the page from a server-side database. Users can post new tweets and see them displayed without refreshing the page. 
 
-## Getting Started
-
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+The page design is responsive and mobile-friendly. I designed the front-end of the application from (nearly)scratch, using HTML, CSS and Sass, and JavaScript and jQuery.
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- Body-Parser
+- Chance
+- Chokidar
+- Sass
+- MD5
+
+## Examples
+
+!["Screenshot of desktop view](https://github.com/seamusmcgill/tweeter/blob/master/docs/tweeter-desktop-view.png)
+!["Screenshot of tweet sent from desktop"](https://github.com/seamusmcgill/tweeter/blob/master/docs/tweeter-desktopview-tweetsent.png)
+!["Screenshot of responsive smallest view"](https://github.com/seamusmcgill/tweeter/blob/master/docs/tweeter-mobileview-composetweet.png)
+!["Screenshot of smallest view with compose tweet area toggled"](https://github.com/seamusmcgill/tweeter/blob/master/docs/tweeter-mobileview-no-composetweet.png)
+!["Screenshot of smallest view scrolled down tweet list"](https://github.com/seamusmcgill/tweeter/blob/master/docs/tweeter-mobileview-togglebutton.png)
+!["Screenshot of error if user submits empty tweet"](https://github.com/seamusmcgill/tweeter/blob/master/docs/tweeter-no-text-error.png)
+!["Screenshot of error if user submits tweet that is too long"](https://github.com/seamusmcgill/tweeter/blob/master/docs/tweeter-too-long-error.png)
