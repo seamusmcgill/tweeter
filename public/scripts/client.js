@@ -54,9 +54,12 @@ $(document).ready(function() {
 
   // Function to show error messaging on tweet error
   const sendTweetError = function(message) {
-    $("div.tweet-error > p").html(message);
-    $("div.tweet-error").slideDown(200);
-    $(".new-tweet textarea").addClass("tweet-error");
+    
+    $("div.tweet-error").slideDown(200, function() {
+      $("div.tweet-error > p").html(message);
+      $(".new-tweet textarea").addClass("tweet-error");
+    });
+
   };
 
   // Toggle the compose new tweet area when the nav icon is clicked
@@ -74,8 +77,10 @@ $(document).ready(function() {
     let $tweetInput = $("#tweet-text").val();
 
     // Hide any tweet error messaging / visuals before submission
-    $(".new-tweet textarea").removeClass("tweet-error");
-    $("div.tweet-error").hide();
+    $("div.tweet-error").slideUp(function() {
+      $("div.tweet-error > p").html("");
+      $(".new-tweet textarea").removeClass("tweet-error");
+    });
 
     if (!$tweetInput) {
       // Fill in the correct error messaging and show the errors
