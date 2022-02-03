@@ -7,7 +7,7 @@
 
 $(document).ready(function() {
 
-  // Hide the tweet error message on load
+  // Hide the compose tweet section and tweet error message on load
   $(".new-tweet").toggle();
   $("div.tweet-error").hide();
 
@@ -73,14 +73,14 @@ $(document).ready(function() {
   $(".new-tweet > form").submit(function(event) {
     event.preventDefault();
     
-    // Check whether a valid tweet was submitted before submitting
-    let $tweetInput = $("#tweet-text").val();
-
     // Hide any tweet error messaging / visuals before submission
     $("div.tweet-error").slideUp(function() {
       $("div.tweet-error > p").html("");
       $(".new-tweet textarea").removeClass("tweet-error");
     });
+
+    // Check whether a valid tweet was submitted before submitting
+    let $tweetInput = $("#tweet-text").val();
 
     if (!$tweetInput) {
       // Fill in the correct error messaging and show the errors
@@ -88,11 +88,11 @@ $(document).ready(function() {
       return;
     }
     if ($tweetInput.length > 140) {
-      // Fill in the correct error messaging and show the errors
       sendTweetError("Oops. Your tweet is over the character limit.");
       return;
     }
 
+    // If valid, serialize the form content
     let $formData = $(this).serialize();
 
     // Send post request to tweets with the form content
@@ -101,6 +101,7 @@ $(document).ready(function() {
       .then(function() {
         $.getJSON("/tweets")
           .then(function(data) {
+            // Get the new tweet which is now the last tweet in /tweets
             let $newTweetObject = data[data.length - 1];
             // Create a new tweet element and prepend it to the tweet container
             let $newTweet = createTweetElement($newTweetObject);
