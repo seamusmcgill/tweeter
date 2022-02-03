@@ -1,35 +1,42 @@
+@import "base";
+
 /* Styling for container */
 .new-tweet {
   margin-bottom: 1em;
-}
-.new-tweet form {
-  /* Styling for form */
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.new-tweet label {
-  padding-bottom: 0.5em;
-  font-weight: 600;
-}
-.new-tweet textarea {
-  /* Styling for text entry area */
-  border-width: 0 0 4px 0;
-  border-color: #545149;
-  width: 100%;
-  resize: none;
-  height: 2em;
-  background-color: #f4f1ec;
-  color: #000000;
-  overflow: auto;
-}
-.new-tweet textarea:focus {
-  outline: none;
-}
-.new-tweet textarea::placeholder {
-  font-weight: 600;
-  color: #545149;
+
+  form {
+    /* Styling for form */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  label {
+    padding-bottom: 0.5em;
+    font-weight: 600;
+  }
+  
+  textarea {
+    /* Styling for text entry area */
+    border-width: 0 0 4px 0;
+    border-color: $font-colour;
+    width: 100%;
+    resize: none;
+    height: 2em;
+    background-color: $background-colour;
+    color: #000000;
+    overflow: auto;
+  }
+  
+  textarea:focus {
+    outline: none;
+  }
+
+  textarea::placeholder {
+    font-weight: 600;
+    color: #545149;
+  }
 }
 
 /* Styling for error message */
@@ -43,9 +50,10 @@ div.tweet-error {
   display: flex;
   justify-content: space-between;
   text-align: center;
-}
-div.tweet-error > p {
-  padding: 0 0.5em;
+
+  > p {
+    padding: 0 0.5em;
+  }
 }
 
 textarea.tweet-error {
@@ -54,6 +62,7 @@ textarea.tweet-error {
   background-color: lightpink;
   transition: 200ms;
 }
+
 
 /* Styling for new tweet button */
 .new-tweet button {
@@ -65,7 +74,7 @@ textarea.tweet-error {
 }
 
 .new-tweet button, .new-tweet output {
-  font-family: "Bungee", cursive;
+  font-family: $logo-font;
   margin-top: 0.5em;
 }
 

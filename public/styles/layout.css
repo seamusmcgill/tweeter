@@ -59,7 +59,6 @@ main.container div.toggle-button {
   justify-content: center;
   cursor: pointer;
 }
-
 main.container > div.toggle-button > i {
   color: #ffffff;
   font-size: 1.5em;

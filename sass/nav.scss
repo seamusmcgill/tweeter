@@ -1,0 +1,52 @@
+@import "base";
+
+nav.navbar-top {
+  height: 120px;
+  width: 100vw;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em 0 1.5em;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  span.navbar-top-logo {
+    font-family: $logo-font;
+  }
+
+  // Right side of navbar styling
+  div.navbar-top-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      color: #ff0000;
+      cursor: pointer;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+  } 
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(0.33em); }
+  100% { transform: translateY(0); }
+}
+
+/* Desktop styling */
+@media only screen and (min-width: 1024px) {
+  nav.navbar-top {
+    width: 100%;
+    background-color: $brand-colour;
+  }
+}

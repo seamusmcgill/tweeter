@@ -1,6 +1,8 @@
+@import "base";
+
 header.main-header {
   background-image: url("../images/asfalt-dark.png");
-  background-color: #D48E3F;
+  background-color: $accent-colour;
   color: #ffffff;
   width: 100vw;
   display: flex;
@@ -9,10 +11,11 @@ header.main-header {
   justify-content: center;
   padding-top: 120px;
   padding-bottom: 1em;
+
   /* Styling for logged-in username */
-}
-header.main-header span {
+  span {
   font-weight: normal;
+  }
 }
 
 /* Desktop styling */

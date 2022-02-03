@@ -20,7 +20,7 @@ nav.navbar-top div.navbar-top-nav {
   justify-content: center;
 }
 nav.navbar-top div.navbar-top-nav i {
-  color: red;
+  color: #ff0000;
   cursor: pointer;
   animation-duration: 2s;
   animation-iteration-count: infinite;

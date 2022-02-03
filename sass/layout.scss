@@ -1,0 +1,85 @@
+@import "base";
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ /* COLOUR PALETTE
+ 
+ #545149 - darkish gray (used for text and borders)
+ #f4f1ec - eggshell/beige (for backgrounds)
+ #4056A1 - medium blue (for nav/buttons/hover)
+ 
+ */
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  color: $font-colour;
+  background-color: $background-colour;
+  font-size: 24px;
+  font-family: $main-font;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+ /* Remove default browser margins on text */
+ h1, h2, p {
+   margin: 0 0;
+ }
+
+ /* Styling for main container */
+ main.container {
+  width: 90vw;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+
+  div.toggle-button {
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.5em;
+    height: 4em;
+    width: 4em;
+    background-color: #ff0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+   }
+
+   > div.toggle-button > i {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 600;
+   }
+
+ }
+
+ /* Desktop styling */
+ @media only screen and (min-width: 1024px) {
+  
+  body {
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+
+  main.container {
+    margin: 8em 5% 0 5%;
+    width: 50%;
+  }
+}
