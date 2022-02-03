@@ -1,8 +1,6 @@
 /* eslint-disable no-undef */
+// Logic to dynamically update the new tweet character counter
 $(document).ready(function() {
-
-  // Hide the toggle scroll button on pageload
-  $(".container > div.toggle-button").hide();
 
   // Listen for input in the tweet text area
   $("#tweet-text").on("input", function() {
