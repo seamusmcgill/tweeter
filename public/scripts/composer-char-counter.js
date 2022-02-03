@@ -5,6 +5,11 @@ $(document).ready(function() {
   // Listen for input in the tweet text area
   $("#tweet-text").on("input", function() {
 
+    // Auto grow the text area if tweet is over one line
+    if (this.scrollHeight > 48) {
+      this.style.height = (this.scrollHeight) + 'px';
+    }
+
     // Set the initial characters to 140 and dynamically update the HTML counter
     let characters = 140 - $(this).val().length;
 
