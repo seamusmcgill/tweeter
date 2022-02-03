@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 $(document).ready(function() {
-  // --- our code goes here ---
-  // Hide the scroll button on pageload
+
+  // Hide the toggle scroll button on pageload
   $(".container > div.toggle-button").hide();
 
   // Listen for input in the tweet text area
@@ -18,26 +18,5 @@ $(document).ready(function() {
     } else {
       $(this).siblings("output").removeClass("over-limit");
     }
-  });
-
-  // When scrolling past the height of the nav, toggle visibility of nav button and togglebutton
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 120) {
-      $("nav.navbar-top div.navbar-top-nav").hide();
-      $(".container > div.toggle-button").fadeIn(200);
-    } else {
-      $("nav.navbar-top div.navbar-top-nav").show();
-      $(".container > div.toggle-button").fadeOut(200);
-    }
-  });
-
-  // Scroll up and slide down the new-tweet div on toggle button click
-  $("main.container > div.toggle-button").on("click", function() {
-
-    $("html, body").animate({scrollTop: 0 }, "slow");
-    
-    $(".new-tweet").slideDown(function() {
-      $(".new-tweet textarea").focus();
-    });
   });
 });
