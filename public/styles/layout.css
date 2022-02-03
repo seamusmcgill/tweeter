@@ -47,3 +47,23 @@ body {
   display: flex;
   flex-direction: column;
  }
+
+ main.container > div.toggle-button {
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+  height: 4em;
+  width: 4em;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+ }
+
+ main.container > div.toggle-button > i {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 600;
+ }
