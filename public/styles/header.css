@@ -9,8 +9,9 @@ header.main-header {
   flex-direction: column;
   padding-top: 120px;
   padding-bottom: 1em;
-  /* Styling for logged-in username */
+  
 }
+/* Styling for logged-in username */
 header.main-header span {
   font-weight: normal;
 }
